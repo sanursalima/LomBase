@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lombase - Temukan dan ikuti berbagai lomba pilihanmu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+
+            <div class="navbar__logo">
+                <a href="#">LomBase</a>
+            </div>
+
+            <ul class="navbar__menu">
+                <li>
+                    <a href="#" class="navbar__link navbar__link--active">
+                        Beranda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="navbar__link">
+                        Daftar Lomba
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="navbar__link">
+                        Tentang Kami
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Filterbox -->
+        <aside class="filter-box">
+
+            <details class="filter-box__dropdown">
+
+                <summary class="filter-box__title">
+                    Kriteria Lomba
+                </summary>
+
+                <form class="filter-box__form">
+
+                    <!-- Kategori -->
+                    <fieldset class="filter-box__group">
+
+                        <legend>Kategori</legend>
+
+                        <label class="filter-box__option">
+                            <input
+                                type="checkbox"
+                                name="kategori"
+                                value="desain"
+                            >
+                            <span>Desain</span>
+                        </label>
+
+                        <label class="filter-box__option">
+                            <input
+                                type="checkbox"
+                                name="kategori"
+                                value="karya-tulis"
+                            >
+                            <span>Karya Tulis</span>
+                        </label>
+
+                        <label class="filter-box__option">
+                            <input
+                                type="checkbox"
+                                name="kategori"
+                                value="fotografi"
+                            >
+                            <span>Fotografi</span>
+                        </label>
+
+                        <label class="filter-box__option">
+                            <input
+                                type="checkbox"
+                                name="kategori"
+                                value="bisnis"
+                            >
+                            <span>Bisnis</span>
+                        </label>
+
+                    </fieldset>
+
+
+                    <!-- Jenjang -->
+                    <fieldset class="filter-box__group">
+
+                        <legend>Jenjang</legend>
+
+                        <label class="filter-box__option">
+                            <input
+                                type="checkbox"
+                                name="jenjang"
+                                value="sma"
+                            >
+                            <span>SMA/SMK</span>
+                        </label>
+
+                        <label class="filter-box__option">
+                            <input
+                                type="checkbox"
+                                name="jenjang"
+                                value="mahasiswa"
+                            >
+                            <span>Mahasiswa</span>
+                        </label>
+
+                        <label class="filter-box__option">
+                            <input
+                                type="checkbox"
+                                name="jenjang"
+                                value="umum"
+                            >
+                            <span>Umum</span>
+                        </label>
+
+                    </fieldset>
+
+
+                    <!-- Jenis Lomba -->
+                    <fieldset class="filter-box__group">
+
+                        <legend>Jenis Lomba</legend>
+
+                        <label class="filter-box__option">
+                            <input
+                                type="checkbox"
+                                name="jenis"
+                                value="individu"
+                            >
+                            <span>Individu</span>
+                        </label>
+
+                        <label class="filter-box__option">
+                            <input
+                                type="checkbox"
+                                name="jenis"
+                                value="tim"
+                            >
+                            <span>Tim</span>
+                        </label>
+
+                    </fieldset>
+
+
+                    <button
+                        type="submit"
+                        class="btn filter-box__button"
+                    >
+                        Terapkan Filter
+                    </button>
+
+                </form>
+
+            </details>
+
+        </aside>
+
+        <!-- Kataloglomba -->
+        <section class="lomba-catalog">
+
+            <div class="lomba-catalog__header">
+
+                <div>
+                    <h1>Katalog Lomba</h1>
+
+                    <p class="muted">
+                        Temukan berbagai lomba sesuai minatmu.
+                    </p>
+                </div>
+
+                <div class="search">
+                    <input
+                        type="search"
+                        class="search__input"
+                        placeholder="Cari lomba..."
+                        aria-label="Cari lomba"
+                    >
+
+                    <button type="button" class="btn">
+                        Cari Lomba
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- GRID CARD -->
+            <div class="lomba-catalog__grid">
+
+                <!-- CARD 1 -->
+                <article class="lomba-card">
+                    <img
+                        src="img/lomba-1.jpg"
+                        alt="Poster Lomba Esai Nasional"
+                        class="lomba-card__image"
+                    >
+                    <div class="lomba-card__content">
+                        <span class="tag">
+                            Karya Tulis
+                        </span>
+                        <h2 class="lomba-card__title">
+                            Lomba Esai Nasional
+                        </h2>
+                        <p class="muted">
+                            Jakarta
+                        </p>
+                        <p class="harga">
+                            Rp50.000
+                        </p>
+                        <a href="#" class="btn-outline lomba-card__button">
+                            Lihat Detail
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 2 -->
+                <article class="lomba-card">
+
+                    <img
+                        src="img/lomba-2.jpg"
+                        alt="Poster Lomba Desain Poster"
+                        class="lomba-card__image"
+                    >
+
+                    <div class="lomba-card__content">
+
+                        <span class="tag">
+                            Desain
+                        </span>
+
+                        <h2 class="lomba-card__title">
+                            Lomba Desain Poster
+                        </h2>
+
+                        <p class="muted">
+                            Bandung
+                        </p>
+
+                        <p class="harga">
+                            Rp35.000
+                        </p>
+
+                        <a
+                            href="#"
+                            class="btn-outline lomba-card__button"
+                        >
+                            Lihat Detail
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 3 -->
+
+                <article class="lomba-card">
+
+                    <img
+                        src="img/lomba-3.jpg"
+                        alt="Poster Lomba Fotografi Kreatif"
+                        class="lomba-card__image"
+                    >
+
+                    <div class="lomba-card__content">
+
+                        <span class="tag">
+                            Fotografi
+                        </span>
+
+                        <h2 class="lomba-card__title">
+                            Lomba Fotografi Kreatif
+                        </h2>
+
+                        <p class="muted">
+                            Yogyakarta
+                        </p>
+
+                        <p class="harga">
+                            Rp25.000
+                        </p>
+
+                        <a
+                            href="#"
+                            class="btn-outline lomba-card__button"
+                        >
+                            Lihat Detail
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 4 -->
+
+                <article class="lomba-card">
+
+                    <img
+                        src="img/lomba-4.jpg"
+                        alt="Poster Lomba Karya Tulis Ilmiah"
+                        class="lomba-card__image"
+                    >
+
+                    <div class="lomba-card__content">
+
+                        <span class="tag">
+                            Karya Tulis
+                        </span>
+
+                        <h2 class="lomba-card__title">
+                            Karya Tulis Ilmiah
+                        </h2>
+
+                        <p class="muted">
+                            Surabaya
+                        </p>
+
+                        <p class="harga">
+                            Rp40.000
+                        </p>
+
+                        <a
+                            href="#"
+                            class="btn-outline lomba-card__button"
+                        >
+                            Lihat Detail
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 5 -->
+
+                <article class="lomba-card">
+
+                    <img
+                        src="img/lomba-5.jpg"
+                        alt="Poster Lomba Business Plan"
+                        class="lomba-card__image"
+                    >
+
+                    <div class="lomba-card__content">
+
+                        <span class="tag">
+                            Bisnis
+                        </span>
+
+                        <h2 class="lomba-card__title">
+                            Business Plan Competition
+                        </h2>
+
+                        <p class="muted">
+                            Jakarta
+                        </p>
+
+                        <p class="harga">
+                            Rp50.000
+                        </p>
+
+                        <a
+                            href="#"
+                            class="btn-outline lomba-card__button"
+                        >
+                            Lihat Detail
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 6 -->
+
+                <article class="lomba-card">
+
+                    <img
+                        src="img/lomba-6.jpg"
+                        alt="Poster Lomba UI UX Design"
+                        class="lomba-card__image"
+                    >
+
+                    <div class="lomba-card__content">
+
+                        <span class="tag">
+                            Desain
+                        </span>
+
+                        <h2 class="lomba-card__title">
+                            UI/UX Design Competition
+                        </h2>
+
+                        <p class="muted">
+                            Bandung
+                        </p>
+
+                        <p class="harga">
+                            Rp30.000
+                        </p>
+
+                        <a
+                            href="#"
+                            class="btn-outline lomba-card__button"
+                        >
+                            Lihat Detail
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer__product">
+            <h2>LomBase</h2>
+
+            <p>
+                Temukan lomba yang sesuai dengan minatmu.
+            </p>
+        </div>
+
+        <nav class="footer__links">
+
+            <a href="#">Beranda</a>
+            <a href="#">Daftar Lomba</a>
+            <a href="#">Tentang Kami</a>
+
+        </nav>
+
+    </footer>
+
+
+    <!-- =========================
+         RESPONSIVE FILTER SCRIPT
+    ========================== -->
+
+    <script>
+        const filterDropdown =
+            document.querySelector(".filter-box__dropdown");
+
+        function setFilterMode() {
+            if (window.innerWidth <= 767) {
+                // Mobile: dropdown tertutup
+                filterDropdown.removeAttribute("open");
+            } else {
+                // Tablet & desktop: filter selalu terbuka
+                filterDropdown.setAttribute("open", "");
+            }
+        }
+
+        setFilterMode();
+
+        window.addEventListener("resize", setFilterMode);
+    </script>
+
+</body>
+</html>

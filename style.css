@@ -1,0 +1,569 @@
+/* =========================
+   COLOR
+========================= */
+
+:root {
+    --bg: #F5F8FF;
+    --surface: #FFFFFF;
+    --text: #172B4D;
+    --muted: #6B7A90;
+    --accent: #2474D4;
+    --dark: #123B6D;
+    --border: #D9E2F0;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 16px;
+}
+
+.muted {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.tag {
+    font-size: 12px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.header {
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 18px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__logo a {
+    color: var(--dark);
+
+    font-size: 24px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    list-style: none;
+}
+
+.navbar__link {
+    color: var(--text);
+
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+    color: var(--accent);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 40px 24px;
+
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   FILTER BOX
+========================= */
+
+.filter-box {
+    background-color: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 24px;
+}
+
+.filter-box__dropdown summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.filter-box__dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.filter-box__title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.filter-box__form {
+    margin-top: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.filter-box__group {
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-box__group legend {
+    margin-bottom: 4px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.filter-box__option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-box__option input {
+    width: 16px;
+    height: 16px;
+
+    accent-color: var(--accent);
+}
+
+.filter-box__button {
+    width: 100%;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+
+    background-color: var(--accent);
+    color: var(--surface);
+
+    padding: 12px 20px;
+
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-weight: 500;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--dark);
+    border-color: var(--dark);
+}
+
+.btn-outline {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.btn-outline:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.search__input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 12px 14px;
+
+    background-color: var(--surface);
+    color: var(--text);
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.search__input:focus {
+    border-color: var(--accent);
+}
+
+
+/* =========================
+   KATALOG
+========================= */
+
+.lomba-catalog__header {
+    margin-bottom: 24px;
+}
+
+.lomba-catalog__title {
+    margin-bottom: 6px;
+}
+
+
+/* =========================
+   CARD GRID
+========================= */
+
+.lomba-catalog__grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.lomba-card {
+    background-color: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+.lomba-card__image {
+    display: block;
+
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+}
+
+.lomba-card__content {
+    padding: 18px;
+}
+
+.lomba-card .tag {
+    display: inline-block;
+
+    margin-bottom: 10px;
+    padding: 4px 10px;
+
+    background-color: #E8F2FF;
+    color: var(--accent);
+
+    border-radius: 20px;
+
+    font-weight: 500;
+}
+
+.lomba-card__title {
+    margin-bottom: 6px;
+
+    font-size: 18px;
+}
+
+.lomba-card__location {
+    color: var(--muted);
+}
+
+.harga {
+    margin: 12px 0 16px;
+
+    color: var(--accent);
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.lomba-card__button {
+    width: 100%;
+
+    text-align: center;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: var(--dark);
+    color: var(--surface);
+
+    padding: 32px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__product h2 {
+    margin-bottom: 6px;
+}
+
+.footer__product p {
+    color: #D9E2F0;
+    font-size: 14px;
+}
+
+.footer__links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer__links a {
+    color: var(--surface);
+
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer__links a:hover {
+    color: #D9E2F0;
+}
+
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+
+
+/* =========================
+   390px / MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .navbar {
+        padding: 16px;
+    }
+
+    .navbar__menu {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .navbar__link {
+        font-size: 14px;
+    }
+
+
+    /* Main berubah menjadi satu kolom */
+
+    .main {
+        grid-template-columns: 1fr;
+
+        padding: 24px 16px;
+
+        gap: 24px;
+    }
+
+
+    /* Filter menjadi dropdown */
+
+    .filter-box {
+        padding: 16px 20px;
+    }
+
+    .filter-box__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: 16px;
+    }
+
+    .filter-box__title::after {
+        content: "⌄";
+
+        color: var(--muted);
+        font-size: 18px;
+    }
+
+    .filter-box__dropdown[open]
+    .filter-box__title::after {
+        content: "⌃";
+    }
+
+
+    /* Search */
+
+    .search {
+        flex-direction: column;
+    }
+
+    .search .btn {
+        width: 100%;
+    }
+
+
+    /* Card satu kolom */
+
+    .lomba-catalog__grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 24px;
+    }
+
+    .footer__links {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+
+/* =========================
+   768px / TABLET
+========================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .navbar {
+        padding: 18px 32px;
+    }
+
+    .main {
+        grid-template-columns: 210px 1fr;
+
+        padding: 32px;
+
+        gap: 24px;
+    }
+
+    .filter-box {
+        padding: 20px;
+    }
+
+    .lomba-catalog__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   1440px / DESKTOP
+========================= */
+
+@media (min-width: 1200px) {
+
+    .navbar {
+        max-width: 1200px;
+    }
+
+    .main {
+        max-width: 1200px;
+
+        grid-template-columns: 240px 1fr;
+
+        gap: 32px;
+    }
+
+    .lomba-catalog__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
