@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LomBase - Temukan dan ikuti berbagai lomba pilihanmu</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -28,6 +28,10 @@
                 >
             </a>
 
+            <!-- TOMBOL HAMBURGER -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Buka Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
             <!-- MENU -->
             <ul class="navbar__menu">
@@ -890,6 +894,70 @@
     </main>
 
     <!-- ==============================
+         FORM PROMOSI LOMBA 
+    =============================== -->
+    <section class="footer-form-section" id="form-promosi-section">
+        <div class="footer-form__inner">
+            <div class="footer-form__text">
+                <h2>Promosikan Lomba Anda</h2>
+                <p>Punya info kompetisi menarik? Daftarkan di LomBase agar dijangkau ribuan peserta!</p>
+            </div>
+            
+            <!-- Tempat pesan sukses dari JavaScript -->
+            <div id="pesan-sukses" class="pesan-sukses" style="display: none;">
+                <i class="fa-solid fa-circle-check"></i> Pengajuan berhasil dikirim! Tim kami akan segera meninjaunya.
+            </div>
+
+            <!-- Tambahkan novalidate agar JS mengambil alih validasi -->
+            <form id="form-promosi" class="footer-form" novalidate>
+                <div class="form-row">
+                    <!-- Input 1: Teks -->
+                    <div class="form-group">
+                        <label for="namaOrganisasi">Nama Penyelenggara</label>
+                        <input type="text" id="namaOrganisasi" name="namaOrganisasi" required minlength="3" placeholder="Contoh: BEM UI">
+                        <small id="error-namaOrganisasi" class="pesan-error"></small>
+                    </div>
+
+                    <!-- Input 2: Email -->
+                    <div class="form-group">
+                        <label for="emailKontak">Email Kontak</label>
+                        <input type="email" id="emailKontak" name="emailKontak" required placeholder="email@organisasi.com">
+                        <small id="error-emailKontak" class="pesan-error"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <!-- Input 3: Select (Kategori) -->
+                    <div class="form-group">
+                        <label for="kategoriLomba">Kategori Lomba</label>
+                        <select id="kategoriLomba" name="kategoriLomba" required>
+                            <option value="">-- Pilih Kategori --</option>
+                            <option value="Bisnis">Bisnis</option>
+                            <option value="Teknologi">Teknologi</option>
+                            <option value="Olahraga">Olahraga</option>
+                            <option value="Sosial">Sosial</option>
+                            <option value="Seni & Desain">Seni & Desain</option>
+                            <option value="Ilmiah">Ilmiah</option>
+                            <option value="Kepenulisan">Kepenulisan</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                        <small id="error-kategoriLomba" class="pesan-error"></small>
+                    </div>
+
+                    <!-- Input 4: Angka (Biaya) -->
+                    <div class="form-group">
+                        <label for="biayaDaftar">Biaya Pendaftaran (Rp)</label>
+                        <input type="text" id="biayaDaftar" name="biayaDaftar" required min="numeric" placeholder="Isi 0 jika gratis">
+                        <small id="error-biayaDaftar" class="pesan-error"></small>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Kirim Pengajuan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ==============================
          FOOTER
     =============================== -->
 
@@ -905,55 +973,6 @@
 
     </footer>
 
-    <script>
-        const filterToggle =
-            document.getElementById("filterToggle");
-
-        const filterBox =
-            document.querySelector(".filter-box");
-
-        const filterArrow =
-            filterToggle.querySelector(".mobile-filter__arrow");
-
-
-        filterToggle.addEventListener("click", function () {
-
-            const isOpen =
-                filterBox.classList.contains(
-                    "filter-box--mobile-active"
-                );
-
-
-            if (isOpen) {
-
-                filterBox.classList.remove(
-                    "filter-box--mobile-active"
-                );
-
-                filterToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                filterArrow.textContent = "▼";
-
-            } else {
-
-                filterBox.classList.add(
-                    "filter-box--mobile-active"
-                );
-
-                filterToggle.setAttribute(
-                    "aria-expanded",
-                    "true"
-                );
-
-                filterArrow.textContent = "▲";
-
-            }
-
-        });
-    </script>
 </body>
 
 </html>

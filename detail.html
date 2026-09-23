@@ -7,6 +7,7 @@
     <title>Detail Lomba | LomBase</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -26,6 +27,11 @@
                     alt="LomBase"
                 >
             </a>
+
+            <!-- TOMBOL HAMBURGER -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Buka Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
             <!-- Menu -->
             <ul class="navbar__menu">
@@ -938,7 +944,6 @@
 
     </main>
 
-
     <!-- ==============================
          FOOTER
     =============================== -->
@@ -954,65 +959,6 @@
         </div>
 
     </footer>
-
-
-    <!-- =========================
-         JAVASCRIPT TAB
-    ========================== -->
-
-    <script>
-
-        const tabButtons =
-            document.querySelectorAll(".detail-tabs__link");
-
-        const tabContents =
-            document.querySelectorAll(".tab-content");
-
-
-        tabButtons.forEach(function(button) {
-
-            button.addEventListener("click", function() {
-
-                const target =
-                    button.getAttribute("data-tab");
-
-
-                /* Hilangkan active dari semua tombol */
-
-                tabButtons.forEach(function(item) {
-                    item.classList.remove(
-                        "detail-tabs__link--active"
-                    );
-                });
-
-
-                /* Hilangkan active dari semua konten */
-
-                tabContents.forEach(function(content) {
-                    content.classList.remove(
-                        "tab-content--active"
-                    );
-                });
-
-
-                /* Aktifkan tombol yang dipilih */
-
-                button.classList.add(
-                    "detail-tabs__link--active"
-                );
-
-
-                /* Tampilkan konten yang sesuai */
-
-                document
-                    .getElementById(target)
-                    .classList.add("tab-content--active");
-
-            });
-
-        });
-
-    </script>
 
 </body>
 
