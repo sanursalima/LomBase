@@ -5,8 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LomBase - Temukan dan ikuti berbagai lomba pilihanmu</title>
+    <meta name="description" content="LomBase adalah platform terpercaya untuk menemukan dan mengikuti lomba, kompetisi, serta ajang nasional dan internasional terbaik di Indonesia.">
+
+    <!-- Preconnect to CDN -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload LCP image (card pertama yang terlihat) -->
+    <link rel="preload" as="image" href="assets/LOMBA ESAI.jpg" fetchpriority="high">
+
+    <!-- Preload custom font -->
+    <link rel="preload" as="font" href="assets/font/Montserrat-VariableFont_wght.ttf" type="font/truetype" crossorigin>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Font Awesome loaded non-render-blocking -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
+
     <script src="script.js" defer></script>
 </head>
 
@@ -25,6 +40,8 @@
                 <img
                     src="assets/Logo-LomBase.svg"
                     alt="Logo LomBase"
+                    width="120"
+                    height="34"
                 >
             </a>
 
@@ -542,8 +559,12 @@
                             <div class="lomba-card__image">
 
                                 <img
-                                    src="assets/LOMBA ESAI.webp"
-                                    alt="Poster NATIONAL ENGLISH STORY TELLING CONTEST 2026"
+                                    src="assets/LOMBA ESAI.jpg"
+                                    alt="Poster LOMBA ESAI NASIONAL #2 2026"
+                                    width="480"
+                                    height="600"
+                                    fetchpriority="high"
+                                    loading="eager"
                                 >
 
                                 <span class="lomba-card__status lomba-card__status--open">
@@ -612,8 +633,12 @@
                             <div class="lomba-card__image">
 
                                 <img
-                                    src="assets/LOMBA ICONFEST.webp"
-                                    alt="Poster ICONFEST"
+                                    src="assets/LOMBA ICONFEST.jpg"
+                                    alt="Poster LOMBA ICONIC 2026"
+                                    width="480"
+                                    height="640"
+                                    loading="lazy"
+                                    decoding="async"
                                 >
 
                                 <span class="lomba-card__status lomba-card__status--open">
@@ -686,8 +711,12 @@
                             <div class="lomba-card__image">
 
                                 <img
-                                    src="assets/NATIONAL ENGLISH STORY TELLING CONTEST 2026.webp"
+                                    src="assets/NATIONAL ENGLISH STORY TELLING CONTEST 2026.jpg"
                                     alt="Poster NATIONAL ENGLISH STORY TELLING CONTEST 2026"
+                                    width="480"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async"
                                 >
 
                                 <span class="lomba-card__status lomba-card__status--closed">
@@ -761,8 +790,12 @@
                             <div class="lomba-card__image">
 
                                 <img
-                                    src="assets/CONTENT CREATOR ENGLISH COMPETITION (CCEC) 2026.heic"
-                                    alt="Poster CCEC  2026"
+                                    src="assets/CONTENT CREATOR ENGLISH COMPETITION (CCEC) 2026.jpg"
+                                    alt="Poster CONTENT CREATOR ENGLISH COMPETITION (CCEC) 2026"
+                                    width="480"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async"
                                 >
 
                                 <span class="lomba-card__status lomba-card__status--open">

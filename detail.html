@@ -5,8 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Lomba | LomBase</title>
+    <meta name="description" content="Lihat detail lengkap lomba, syarat, mekanisme, timeline, dan informasi pendaftaran di LomBase.">
+
+    <!-- Preconnect to CDN -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="assets/optimized/LOMBA ESAI.jpg" fetchpriority="high">
+
+    <!-- Preload custom font -->
+    <link rel="preload" as="font" href="assets/font/Montserrat-VariableFont_wght.ttf" type="font/truetype" crossorigin>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Font Awesome loaded non-render-blocking -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
+
     <script src="script.js" defer></script>
 </head>
 
@@ -25,6 +40,8 @@
                 <img
                     src="assets/Logo-LomBase.svg"
                     alt="LomBase"
+                    width="120"
+                    height="34"
                 >
             </a>
 
@@ -44,7 +61,7 @@
 
                 <li>
                     <a
-                        href="index.html"
+                        href="index.html#katalog"
                         class="navbar__link navbar__link--active"
                     >
                         Daftar Lomba
@@ -130,9 +147,13 @@
         <section class="detail-hero">
 
             <img
-                src="assets/LOMBA ESAI.webp"
-                alt="Poster Business Plan Competition 2026"
+                src="assets/optimized/LOMBA ESAI.jpg"
+                alt="Poster Lomba Esai Nasional #2 2026"
                 class="detail-hero__image"
+                width="1200"
+                height="600"
+                fetchpriority="high"
+                loading="eager"
             >
 
         </section>

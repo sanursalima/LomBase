@@ -23,7 +23,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+    src: url("assets/font/Montserrat-VariableFont_wght.ttf") format("truetype");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -31,7 +31,7 @@
 
 @font-face {
     font-family: "Myanmar Khyay";
-    src: url("assets/fonts/MyanmarKhyay.ttf") format("truetype");
+    src: url("assets/font/MyanmarKhyay.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -330,6 +330,10 @@ p {
     font-size: 24px;
     color: var(--text);
     cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* =========================================================
@@ -3332,4 +3336,136 @@ a:focus-visible {
     *::after {
         transition: none !important;
     }
+}
+
+
+/* =========================================================
+   TOUCH TARGET SIZES (Accessibility - min 48x48px)
+   Fixes Lighthouse: "Touch targets do not have sufficient size"
+========================================================= */
+
+/* Hamburger button shown on mobile - ensure touch target */
+@media (max-width: 767px) {
+    .hamburger-btn {
+        display: flex;
+    }
+}
+
+/* Navbar links min tap target height */
+@media (max-width: 767px) {
+    .navbar__link {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+    }
+
+    /* Card button touch target */
+    .lomba-card__button {
+        height: 44px;
+        font-size: 13px;
+    }
+
+    /* Filter checkbox label tap area */
+    .filter-checkbox {
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Format option tap area */
+    .format-option {
+        min-height: 44px;
+        justify-content: center;
+    }
+
+    /* Pagination buttons */
+    .lomba-pagination__prev,
+    .lomba-pagination__next {
+        min-height: 44px;
+        padding: 0 12px;
+    }
+
+    .lomba-pagination__page {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Info card button */
+    .info-card__button {
+        height: 48px;
+        font-size: 14px;
+    }
+
+    /* Mobile filter button */
+    .mobile-filter__button {
+        min-height: 48px;
+    }
+
+    /* Tab buttons */
+    .detail-tabs__link {
+        min-height: 44px;
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+
+/* =========================================================
+   CONTRAST IMPROVEMENTS (Accessibility)
+   Fixes Lighthouse: "Background and foreground colors do not
+   have a sufficient contrast ratio"
+========================================================= */
+
+/* muted text contrast improvement: #6B7A90 on white = ~3.5:1 
+   Darken to pass AA (4.5:1) */
+.lomba-card__details p,
+.lomba-catalog__intro p,
+.breadcrumb,
+.breadcrumb a,
+.detail-header__organizer,
+.detail-header__description,
+.detail-section > p,
+.requirement-list p,
+.mechanism-item__content > p,
+.organizer-card__description,
+.highlight-box p,
+.detail-list {
+    color: #4A5568;
+}
+
+/* Footer copyright text contrast */
+.footer__bottom p {
+    color: #1a1fa0;
+}
+
+/* Muted tag text */
+.muted {
+    color: #4A5568;
+}
+
+/* Filter checkbox text */
+.filter-checkbox {
+    color: #2D3748;
+}
+
+/* Pagination info text */
+.lomba-pagination__info {
+    color: #4A5568;
+}
+
+
+/* =========================================================
+   PERFORMANCE - CONTAIN / WILL-CHANGE
+========================================================= */
+
+/* Prevent repaints during card hover */
+.lomba-card {
+    will-change: transform;
+    contain: layout style;
+}
+
+/* Prevent layout recalculation for fixed header */
+.header {
+    contain: layout style;
 }
